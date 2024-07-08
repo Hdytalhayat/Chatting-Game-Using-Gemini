@@ -8,13 +8,18 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 
 conversation_history = []
 
+file_path = 'F:\PythonGAme\American Sign (2)\American Sign\CharInfo.txt'
+
+with open(file_path, 'r') as file:
+    char_info_string = file.read()
+
 @app.route('/chat', methods=['POST'])
 def chat():
     input_data = request.json.get('message')
     if not input_data:
         return jsonify({"error": "No message provided"}), 400
 
-    conversation_history.append("User: " + input_data)
+    conversation_history.append("char_info_string " + input_data)
     full_conversation = "\n".join(conversation_history)
 
     response = model.generate_content(full_conversation)

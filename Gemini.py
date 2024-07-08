@@ -8,7 +8,7 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 
 conversation_history = []
 
-file_path = 'F:\PythonGAme\American Sign (2)\American Sign\CharInfo.txt'
+file_path = 'CharInfo.txt'
 
 with open(file_path, 'r') as file:
     char_info_string = file.read()

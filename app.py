@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 app = Flask(__name__)
 
-genai.configure(api_key="AIzaSyBRqw3Ozd7fNRmKAvzglsrtEPKrs2tAxOU")
+genai.configure(api_key="API")
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 conversation_history = []

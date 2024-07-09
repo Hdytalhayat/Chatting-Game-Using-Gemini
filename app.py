@@ -19,7 +19,7 @@ def chat():
     if not input_data:
         return jsonify({"error": "No message provided"}), 400
 
-    conversation_history.append("char_info_string " + input_data)
+    conversation_history.append("User : "+ char_info_string+ ". " + input_data)
     full_conversation = "\n".join(conversation_history)
 
     response = model.generate_content(full_conversation)
